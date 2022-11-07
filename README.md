@@ -164,7 +164,8 @@ const getAdList = useCallback(async () => {
     } finally {  
       listDispatch({ type: DataActionEnum.SET_IS_LOADING, isLoading: false });  
     }  
-  }, [adService, listDispatch]);  const getAdTrend = useCallback(async () => {  
+  }, [adService, listDispatch]);  
+  const getAdTrend = useCallback(async () => {  
     trendDispatch({ type: DataActionEnum.SET_IS_LOADING, isLoading: true });  
     try {  
       const response = _await_ adService?.getTrend();  
